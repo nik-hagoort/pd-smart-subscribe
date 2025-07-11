@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PD Smart Subscribe</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .logo {
+      width: 24px;
+      height: 24px;
+      background: #048A24;
+      border-radius: 4px;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .title {
+      font-weight: 600;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-weight: 600;
+      color: #048A24;
+      margin-bottom: 8px;
+    }
+    .step {
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .step:before {
+      content: counter(step-counter);
+      counter-increment: step-counter;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #048A24;
+      color: white;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .steps {
+      counter-reset: step-counter;
+    }
+    .note {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 3px solid #048A24;
+      font-size: 13px;
+      color: #666;
+    }
+    .highlight {
+      background: #fff3cd;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+    .help-note {
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">PD</div>
+    <div class="title">Smart Subscribe</div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">How to Use:</div>
+    <div class="steps">
+      <div class="step">Navigate to the PagerDuty status page</div>
+      <div class="step">Check the box next to any Business Service(s) that you would like to subscribe to</div>
+      <div class="step">Click the green <span class="highlight">"Subscribe to Selected Services"</span> button in the bottom right corner of your page</div>
+      <div class="step">You'll be redirected to your subscription page where services will be automatically added</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Tip:</strong> Want to subscribe to all of the Business Services? Click the blue <span class="highlight">"Select All"</span> button without checking any boxes
+  </div>
+
+  <div class="help-note">
+    Need assistance?<br>
+    Contact the SRE team via the "Get Help" channel in Zoom!
+  </div>
+</body>
+</html>

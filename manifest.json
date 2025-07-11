@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "PagerDuty Smart Subscribe",
+  "version": "1.1",
+  "description": "Subscribe to selected PagerDuty business services from the status page.",
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://*.pagerduty.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.pagerduty.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.pagerduty.com/users/*/subscriptions*"],
+      "js": ["subscriptions.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  }
+}
